@@ -1,0 +1,27 @@
+---
+
+# jenkins variables
+project_name: docker-boinc
+external_type: na
+custom_version_command: "curl -sX GET http://archive.ubuntu.com/ubuntu/dists/bionic-updates/universe/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: boinc-client' | awk -F ': ' '/Version/{print $2;exit}'"
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - BUILD_VERSION_ARG = 'BOINC_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-boinc'
+  - CONTAINER_NAME = 'boinc'
+  - DOCKERHUB_IMAGE = 'linuxserver/boinc'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/boinc'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/boinc'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH = 'false'
+  - CI = 'true'
+  - CI_WEB = 'true'
+  - CI_PORT = '8080'
+  - CI_SSL = 'false'
+  - CI_DELAY = '120'
+  - CI_DOCKERENV = 'TZ=US/Pacific'
+  - CI_AUTH = 'user:password'
+  - CI_WEBPATH = ''
