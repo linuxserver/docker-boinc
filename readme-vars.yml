@@ -39,7 +39,9 @@ opt_param_env_vars:
   - { env_var: "GUAC_PASS", env_value: "900150983cd24fb0d6963f7d28e17f72", desc: "Password's md5 hash for the BOINC desktop gui." }
 opt_param_usage_include_vols: false
 opt_param_usage_include_ports: false
-opt_param_device_map: false
+opt_param_device_map: true
+opt_param_devices:
+  - { device_path: "/dev/dri", device_host_path: "/dev/dri", desc: "Only needed if you want to use your Intel GPU (vaapi)." }
 opt_cap_add_param: false
 optional_block_1: false
 
@@ -59,6 +61,21 @@ app_setup_block: |
   ```
   
   You can access advanced features of the Guacamole remote desktop using `ctrl`+`alt`+`shift` enabling you to use remote copy/paste and different languages.
+
+  ## GPU Hardware Acceleration
+  
+  ### Intel
+  
+  Hardware acceleration users for Intel Quicksync will need to mount their /dev/dri video device inside of the container by passing the following command when running or creating the container:
+  ```--device=/dev/dri:/dev/dri```
+  We will automatically ensure the abc user inside of the container has the proper permissions to access this device.
+  
+  ### Nvidia
+  
+  Hardware acceleration users for Nvidia will need to install the container runtime provided by Nvidia on their host, instructions can be found here:
+  https://github.com/NVIDIA/nvidia-docker
+  We automatically add the necessary environment variable that will utilise all the features available on a GPU on the host. Once nvidia-docker is installed on your host you will need to re/create the docker container with the nvidia container runtime `--runtime=nvidia` and add an environment variable `-e NVIDIA_VISIBLE_DEVICES=all` (can also be set to a specific gpu's UUID, this can be discovered by running `nvidia-smi --query-gpu=gpu_name,gpu_uuid --format=csv` ). NVIDIA automatically mounts the GPU and drivers from your host into the BOINC docker container.
+
 # changelog
 changelogs:
   - { date: "15.03.20:", desc: "Initial release." }

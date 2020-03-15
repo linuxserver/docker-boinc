@@ -69,6 +69,7 @@ docker create \
   -e GUAC_PASS=900150983cd24fb0d6963f7d28e17f72 `#optional` \
   -p 8080:8080 \
   -v /path/to/data:/config \
+  --device /dev/dri:/dev/dri `#optional` \
   --restart unless-stopped \
   linuxserver/boinc
 ```
@@ -95,6 +96,8 @@ services:
       - /path/to/data:/config
     ports:
       - 8080:8080
+    devices:
+      - /dev/dri:/dev/dri #optional
     restart: unless-stopped
 ```
 
@@ -111,6 +114,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e GUAC_USER=abc` | Username for the BOINC desktop gui. |
 | `-e GUAC_PASS=900150983cd24fb0d6963f7d28e17f72` | Password's md5 hash for the BOINC desktop gui. |
 | `-v /config` | Where BOINC should store its database and config. |
+| `--device /dev/dri` | Only needed if you want to use your Intel GPU (vaapi). |
 
 ## Environment variables from files (Docker secrets)
 
@@ -154,6 +158,20 @@ printf '%s' password | md5sum
 ```
 
 You can access advanced features of the Guacamole remote desktop using `ctrl`+`alt`+`shift` enabling you to use remote copy/paste and different languages.
+
+## GPU Hardware Acceleration
+
+### Intel
+
+Hardware acceleration users for Intel Quicksync will need to mount their /dev/dri video device inside of the container by passing the following command when running or creating the container:
+```--device=/dev/dri:/dev/dri```
+We will automatically ensure the abc user inside of the container has the proper permissions to access this device.
+
+### Nvidia
+
+Hardware acceleration users for Nvidia will need to install the container runtime provided by Nvidia on their host, instructions can be found here:
+https://github.com/NVIDIA/nvidia-docker
+We automatically add the necessary environment variable that will utilise all the features available on a GPU on the host. Once nvidia-docker is installed on your host you will need to re/create the docker container with the nvidia container runtime `--runtime=nvidia` and add an environment variable `-e NVIDIA_VISIBLE_DEVICES=all` (can also be set to a specific gpu's UUID, this can be discovered by running `nvidia-smi --query-gpu=gpu_name,gpu_uuid --format=csv` ). NVIDIA automatically mounts the GPU and drivers from your host into the BOINC docker container.
 
 
 
