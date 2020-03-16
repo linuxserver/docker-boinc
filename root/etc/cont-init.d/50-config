@@ -3,6 +3,9 @@
 # make our folders
 mkdir -p /config
 
+# clean up old PIDs
+rm -rf "/config/BOINC Manager-abc"
+
 # permissions
 chown -R abc:abc \
 	/config
