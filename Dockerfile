@@ -24,6 +24,8 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	${BOINC} \
+	beignet-opencl-icd \
+	boinc-client-opencl \
 	boinc-manager \
 	i965-va-driver \
 	mesa-va-drivers && \
