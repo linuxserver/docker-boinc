@@ -158,6 +158,7 @@ printf '%s' password | md5sum
 ```
 
 You can access advanced features of the Guacamole remote desktop using `ctrl`+`alt`+`shift` enabling you to use remote copy/paste and different languages.
+Sometimes, the pop-up windows may open in a tiny box in the upper left corner of the screen. When that happens, you can find the corner and resize them.
 
 ## GPU Hardware Acceleration
 
@@ -239,4 +240,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **16.03.20:** - Clean up old pid files.
 * **15.03.20:** - Initial release.
