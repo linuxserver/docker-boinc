@@ -158,6 +158,9 @@ printf '%s' password | md5sum
 ```
 
 You can access advanced features of the Guacamole remote desktop using `ctrl`+`alt`+`shift` enabling you to use remote copy/paste and different languages.
+
+It is recommended to switch to `Advanced View` in the top menu, because the `Computing Preferences` don't seem to be displayed in `Simple View`.
+
 Sometimes, the pop-up windows may open in a tiny box in the upper left corner of the screen. When that happens, you can find the corner and resize them.
 
 ## GPU Hardware Acceleration
