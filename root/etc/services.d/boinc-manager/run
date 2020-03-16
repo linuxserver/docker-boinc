@@ -6,6 +6,16 @@ fdmove -c 2 1
 # Wait until openbox is running
 if { s6-svwait -t 10000 -U /var/run/s6/services/openbox/ }
 
+# Wait until Boinc client is set up and the project list is populated
+foreground {
+    loopwhilex -x 0
+    test -f /config/all_projects_list.xml
+}
+foreground {
+    loopwhilex -x 0
+    grep -q rosetta /config/all_projects_list.xml
+}
+
 # Drop privileges and set env
 s6-setuidgid abc
 s6-env DISPLAY=:1 HOME=/config
