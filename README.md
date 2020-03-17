@@ -51,6 +51,8 @@ The architectures supported by this image are:
 | Architecture | Tag |
 | :----: | --- |
 | x86-64 | latest |
+| arm64 | arm64v8-latest |
+| armhf | arm32v7-latest |
 
 
 ## Usage
@@ -115,6 +117,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e GUAC_PASS=900150983cd24fb0d6963f7d28e17f72` | Password's md5 hash for the BOINC desktop gui. |
 | `-v /config` | Where BOINC should store its database and config. |
 | `--device /dev/dri` | Only needed if you want to use your Intel GPU (vaapi). |
+
 
 ## Environment variables from files (Docker secrets)
 
@@ -243,5 +246,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **17.03.20:** - Add armhf and aarch64 builds and switch to multi-arch image.
 * **16.03.20:** - Clean up old pid files.
 * **15.03.20:** - Initial release.
