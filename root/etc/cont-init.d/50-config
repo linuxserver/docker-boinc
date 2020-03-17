@@ -1,7 +1,9 @@
 #!/usr/bin/with-contenv bash
 
 # make our folders
-mkdir -p /config
+mkdir -p \
+	/config \
+	/dev/input/mice
 
 # clean up old PIDs
 rm -rf "/config/BOINC Manager-abc"

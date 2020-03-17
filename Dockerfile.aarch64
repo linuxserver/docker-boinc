@@ -24,7 +24,8 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	${BOINC} \
-	boinc-manager && \
+	boinc-manager \
+	python-xdg && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \

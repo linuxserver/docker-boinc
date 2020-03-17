@@ -5,8 +5,6 @@ fdmove -c 2 1
 
 # Wait until openbox is running
 if { s6-svwait -t 10000 -U /var/run/s6/services/openbox/ }
-# Wait until guacamole is running
-if { s6-svwait -t 10000 -U /var/run/s6/services/guacamole/ }
 
 # Wait until Boinc client is set up and the project list is populated
 foreground {

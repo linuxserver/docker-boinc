@@ -28,7 +28,8 @@ RUN \
 	boinc-client-opencl \
 	boinc-manager \
 	i965-va-driver \
-	mesa-va-drivers && \
+	mesa-va-drivers \
+	python-xdg && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
