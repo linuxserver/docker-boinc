@@ -195,7 +195,7 @@ libhunspell-1.6-01.6.2-1
 libhx509-5-heimdal7.5.0+dfsg-1
 libhyphen02.8.8-5
 libice62:1.0.9-2
-libicu6060.2-3ubuntu3
+libicu6060.2-3ubuntu3.1
 libid3tag00.15.1b-13
 libidn111.33-2.1ubuntu1.2
 libidn2-02.0.4-1.1ubuntu0.2
@@ -269,9 +269,12 @@ libpsl50.19.1-5build1
 libpthread-stubs0-dev0.3-4
 libpulse01:11.1-1ubuntu7.4
 libpulsedsp1:11.1-1ubuntu7.4
+libpython2.7-minimal2.7.17-1~18.04
+libpython2.7-stdlib2.7.17-1~18.04
 libpython3.6-minimal3.6.9-1~18.04
 libpython3.6-stdlib3.6.9-1~18.04
 libpython3-stdlib3.6.7-1~18.04
+libpython-stdlib2.7.15~rc1-1
 libraw1394-112.1.2-1
 libreadline77.0-3
 librest-0.7-00.8.0-2
@@ -435,10 +438,15 @@ procps2:3.3.12-3ubuntu1.2
 publicsuffix20180223.1310-1
 pulseaudio1:11.1-1ubuntu7.4
 pulseaudio-utils1:11.1-1ubuntu7.4
+python2.7.15~rc1-1
+python2.72.7.17-1~18.04
+python2.7-minimal2.7.17-1~18.04
 python33.6.7-1~18.04
 python3.63.6.9-1~18.04
 python3.6-minimal3.6.9-1~18.04
 python3-minimal3.6.7-1~18.04
+python-minimal2.7.15~rc1-1
+python-xdg0.25-4ubuntu1
 readline-common7.0-3
 sed4.4-2
 sensible-utils0.0.12
