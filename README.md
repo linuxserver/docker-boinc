@@ -118,7 +118,6 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-v /config` | Where BOINC should store its database and config. |
 | `--device /dev/dri` | Only needed if you want to use your Intel GPU (vaapi). |
 
-
 ## Environment variables from files (Docker secrets)
 
 You can set any environment variable from a file by using a special prepend `FILE__`. 
