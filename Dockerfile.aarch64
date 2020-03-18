@@ -1,4 +1,4 @@
-FROM lsiobase/guacgui
+FROM lsiobase/guacgui:arm64v8-latest
 
 # set version label
 ARG BUILD_DATE
@@ -23,11 +23,7 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	${BOINC} \
-	beignet-opencl-icd \
-	boinc-client-opencl \
 	boinc-manager \
-	i965-va-driver \
-	mesa-va-drivers \
 	python-xdg && \
  echo "**** cleanup ****" && \
  apt-get clean && \
