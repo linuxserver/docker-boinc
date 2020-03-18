@@ -11,8 +11,7 @@ LABEL maintainer="aptalca"
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 
 # global environment settings
-ENV DEBIAN_FRONTEND="noninteractive"
-ENV APP_NAME="Boinc"
+ENV DEBIAN_FRONTEND="noninteractive" APPNAME="Boinc"
 
 RUN \
  echo "**** install packages ****" && \
