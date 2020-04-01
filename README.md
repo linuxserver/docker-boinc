@@ -245,6 +245,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.04.20:** - Install boinc from ppa.
 * **17.03.20:** - Add armhf and aarch64 builds and switch to multi-arch image.
 * **16.03.20:** - Clean up old pid files.
 * **15.03.20:** - Initial release.
