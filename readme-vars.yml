@@ -84,6 +84,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.04.20:", desc: "Install boinc from ppa." }
   - { date: "17.03.20:", desc: "Add armhf and aarch64 builds and switch to multi-arch image." }
   - { date: "16.03.20:", desc: "Clean up old pid files." }
   - { date: "15.03.20:", desc: "Initial release." }
