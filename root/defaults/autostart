@@ -1,0 +1,10 @@
+while [ ! -f /config/all_projects_list.xml ]; do
+    sleep 1
+done
+while ! grep -q rosetta /config/all_projects_list.xml; do
+    sleep 1
+done
+
+cd /config
+
+/usr/bin/boincmgr
