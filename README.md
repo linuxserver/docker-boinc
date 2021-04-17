@@ -40,6 +40,7 @@ Find us at:
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fboinc%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/boinc/latest/index.html)
 
 [BOINC](https://boinc.berkeley.edu/) is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications.
+
 [![boinc](https://raw.githubusercontent.com/BOINC/boinc/master/doc/logo/boinc_logo_black.jpg)](https://boinc.berkeley.edu/)
 
 ## Supported Architectures
