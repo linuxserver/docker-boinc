@@ -75,6 +75,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "24.02.22:", desc: "Rebase to focal." }
   - { date: "31.01.22:", desc: "Improve device permissions setting verbosity." }
   - { date: "23.03.21:", desc: "Rebase to rdesktop-web baseimage. Deprecate `GUAC_USER` and `GUAC_PASS` env vars. Existing users can set the new var `PASSWORD` for the user `abc`." }
   - { date: "01.04.20:", desc: "Install boinc from ppa." }
