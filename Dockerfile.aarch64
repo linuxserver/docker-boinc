@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arm64v8-bionic
+FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arm64v8-focal
 
 # set version label
 ARG BUILD_DATE
@@ -19,8 +19,8 @@ RUN \
  apt-get install -y \
 	gnupg && \
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys E36CE452F7C2AE96FB1354901BCB19E03C2A1859 && \
- echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu bionic main" >> /etc/apt/sources.list.d/boinc.list && \
- echo "deb-src http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu bionic main" >> /etc/apt/sources.list.d/boinc.list && \
+ echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu focal main" >> /etc/apt/sources.list.d/boinc.list && \
+ echo "deb-src http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu focal main" >> /etc/apt/sources.list.d/boinc.list && \
  if [ -z ${BOINC_VERSION+x} ]; then \
 	BOINC="boinc-client"; \
  else \

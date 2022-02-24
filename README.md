@@ -250,6 +250,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **24.02.22:** - Rebase to focal.
 * **31.01.22:** - Improve device permissions setting verbosity.
 * **23.03.21:** - Rebase to rdesktop-web baseimage. Deprecate `GUAC_USER` and `GUAC_PASS` env vars. Existing users can set the new var `PASSWORD` for the user `abc`.
 * **01.04.20:** - Install boinc from ppa.
