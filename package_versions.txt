@@ -269,7 +269,7 @@ libedata-cal-2.0-13.36.5-0ubuntu1
 libedataserver-1.2-243.36.5-0ubuntu1
 libedataserverui-1.2-23.36.5-0ubuntu1
 libedit23.1-20191231-1
-libegl11.3.2-1~ubuntu0.20.04.1
+libegl11.3.2-1~ubuntu0.20.04.2
 libegl-mesa021.2.6-0ubuntu0.1~20.04.1
 libelf10.176-1.1build1
 libenchant-2-22.2.8-1ubuntu0.20.04.1
@@ -312,15 +312,15 @@ libgeocode-glib03.26.2-2
 libgif75.1.9-1
 libgirepository-1.0-11.64.1-1~ubuntu20.04.1
 libgjs0g1.64.5-0ubuntu0.20.04.01
-libgl11.3.2-1~ubuntu0.20.04.1
+libgl11.3.2-1~ubuntu0.20.04.2
 libgl1-mesa-dri21.2.6-0ubuntu0.1~20.04.1
 libglapi-mesa21.2.6-0ubuntu0.1~20.04.1
-libgles21.3.2-1~ubuntu0.20.04.1
+libgles21.3.2-1~ubuntu0.20.04.2
 libglib2.0-02.64.6-1~ubuntu20.04.4
 libglib2.0-bin2.64.6-1~ubuntu20.04.4
 libglib2.0-data2.64.6-1~ubuntu20.04.4
-libglvnd01.3.2-1~ubuntu0.20.04.1
-libglx01.3.2-1~ubuntu0.20.04.1
+libglvnd01.3.2-1~ubuntu0.20.04.2
+libglx01.3.2-1~ubuntu0.20.04.2
 libglx-mesa021.2.6-0ubuntu0.1~20.04.1
 libgmp102:6.2.0+dfsg-4
 libgnome-autoar-0-00.2.3-2ubuntu0.4
@@ -453,7 +453,7 @@ libnss-mdns0.14.1-1ubuntu1
 libobrender32v53.6.1-9ubuntu0.20.04.1
 libobt2v53.6.1-9ubuntu0.20.04.1
 libogg01.3.4-0ubuntu1
-libopengl01.3.2-1~ubuntu0.20.04.1
+libopengl01.3.2-1~ubuntu0.20.04.2
 libopenjp2-72.3.1-1ubuntu4.20.04.1
 libopus01.3.1-0ubuntu1
 liborc-0.4-01:0.4.31-1
@@ -617,7 +617,7 @@ libx11-62:1.6.9-2ubuntu1.2
 libx11-data2:1.6.9-2ubuntu1.2
 libx11-dev2:1.6.9-2ubuntu1.2
 libx11-xcb12:1.6.9-2ubuntu1.2
-libxatracker221.2.6-0ubuntu0.1~20.04.1
+libxatracker221.2.6-0ubuntu0.1~20.04.2
 libxau61:1.0.9-0ubuntu1
 libxau-dev1:1.0.9-0ubuntu1
 libxaw72:1.0.13-1
@@ -682,7 +682,7 @@ lsb-base11.1.0ubuntu2
 lsb-release11.1.0ubuntu2
 man-db2.9.1-1
 mawk1.3.4.20200120-2
-mesa-vulkan-drivers21.2.6-0ubuntu0.1~20.04.1
+mesa-vulkan-drivers21.2.6-0ubuntu0.1~20.04.2
 mime-support3.64ubuntu1
 mobile-broadband-provider-info20190618-3
 modemmanager1.16.6-2~20.04.1
