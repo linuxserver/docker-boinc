@@ -15,12 +15,12 @@ aspell-en2018.04.16-0-1
 at-spi2-core2.36.0-2
 avahi-daemon0.7-4ubuntu7.1
 avahi-utils0.7-4ubuntu7.1
-base-files11ubuntu5.4
+base-files11ubuntu5.5
 base-passwd3.5.47
 bash5.0-6ubuntu1.1
 beignet-opencl-icd1.3.2-7build1
-bind9-host1:9.16.1-0ubuntu2.9
-bind9-libs1:9.16.1-0ubuntu2.9
+bind9-host1:9.16.1-0ubuntu2.10
+bind9-libs1:9.16.1-0ubuntu2.10
 bluez5.53-0ubuntu3.5
 boinc-client7.18.1+dfsg+202202041710~ubuntu20.04.1
 boinc-client-opencl7.18.1+dfsg+202202041710~ubuntu20.04.1
@@ -36,7 +36,7 @@ colord1.4.4-2
 colord-data1.4.4-2
 coreutils8.30-3ubuntu2
 cpp4:9.3.0-1ubuntu2
-cpp-99.3.0-17ubuntu1~20.04
+cpp-99.4.0-1ubuntu1~20.04
 cracklib-runtime2.9.6-3.2
 crda3.18-1build1
 cups-pk-helper0.2.6-1ubuntu3
@@ -74,7 +74,7 @@ fonts-dejavu-core2.37-1
 fprintd1.90.9-1~ubuntu20.04.1
 gawk1:5.0.1+dfsg-1
 gcc-10-base10.3.0-1ubuntu1~20.04
-gcc-9-base9.3.0-17ubuntu1~20.04
+gcc-9-base9.4.0-1ubuntu1~20.04
 gcr3.36.0-2build1
 gdm33.36.3-0ubuntu0.20.04.4
 geoclue-2.02.5.6-0ubuntu1
@@ -221,7 +221,7 @@ libcanberra-pulse0.30-7ubuntu1
 libcap21:2.32-1
 libcap2-bin1:2.32-1
 libcap-ng00.7.9-2.1build1
-libc-bin2.31-0ubuntu9.2
+libc-bin2.31-0ubuntu9.7
 libcbor0.60.6.0-0ubuntu1
 libcdparanoia03.10.2+debian-13
 libcheese83.34.0-1ubuntu1
@@ -276,7 +276,7 @@ libenchant-2-22.2.8-1ubuntu0.20.04.1
 libepoxy01.5.4-1
 libevdev21.9.0+dfsg-1ubuntu0.1
 libexif120.6.21-6ubuntu0.4
-libexpat12.2.9-1ubuntu0.2
+libexpat12.2.9-1ubuntu0.4
 libext2fs21.45.5-2ubuntu1
 libfdisk12.34-0.1ubuntu9.3
 libffi73.3-4
@@ -551,7 +551,7 @@ libspeexdsp11.2~rc1.2-1.1ubuntu1.20.04.1
 libsqlite3-03.31.1-4ubuntu0.2
 libss21.45.5-2ubuntu1
 libssh-40.9.3-2ubuntu2.2
-libssl1.11.1.1f-1ubuntu2.10
+libssl1.11.1.1f-1ubuntu2.11
 libstartup-notification00.12-6
 libstdc++610.3.0-1ubuntu1~20.04
 libstemmer0d0+svn585-2
@@ -675,7 +675,7 @@ libxxf86vm11:1.1.4-1build1
 libyaml-0-20.2.2-1
 libyelp03.36.2-0ubuntu1
 libzstd11.4.4+dfsg-3ubuntu0.1
-locales2.31-0ubuntu9.2
+locales2.31-0ubuntu9.7
 login1:4.8.1-1ubuntu5.20.04.1
 logsave1.45.5-2ubuntu1
 lsb-base11.1.0ubuntu2
@@ -702,7 +702,7 @@ obconf1:2.0.4+git20150213-2
 ocl-icd-libopencl12.2.11-1ubuntu1
 openbox3.6.1-9ubuntu0.20.04.1
 openssh-client1:8.2p1-4ubuntu0.4
-openssl1.1.1f-1ubuntu2.10
+openssl1.1.1f-1ubuntu2.11
 p11-kit0.23.20-1ubuntu0.1
 p11-kit-modules0.23.20-1ubuntu0.1
 packagekit1.1.13-2ubuntu1.1
