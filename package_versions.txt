@@ -54,7 +54,7 @@ desktop-file-utils0.24-1ubuntu3
 dictionaries-common1.28.1
 diffutils1:3.7-3
 dirmngr2.2.19-3ubuntu2.1
-distro-info-data0.43ubuntu1.9
+distro-info-data0.43ubuntu1.10
 dnsmasq-base2.80-1.1ubuntu1.4
 dns-root-data2019052802
 docbook-xml4.5-9
@@ -114,9 +114,9 @@ gkbd-capplet3.26.1-1
 glib-networking2.64.2-1ubuntu0.1
 glib-networking-common2.64.2-1ubuntu0.1
 glib-networking-services2.64.2-1ubuntu0.1
-gnome-control-center1:3.36.5-0ubuntu3
-gnome-control-center-data1:3.36.5-0ubuntu3
-gnome-control-center-faces1:3.36.5-0ubuntu3
+gnome-control-center1:3.36.5-0ubuntu4
+gnome-control-center-data1:3.36.5-0ubuntu4
+gnome-control-center-faces1:3.36.5-0ubuntu4
 gnome-desktop3-data3.36.8-0ubuntu1
 gnome-keyring3.36.0-1ubuntu1
 gnome-keyring-pkcs113.36.0-1ubuntu1
@@ -161,7 +161,7 @@ ibus1.5.22-2ubuntu2.1
 ibus-data1.5.22-2ubuntu2.1
 ibus-gtk1.5.22-2ubuntu2.1
 ibus-gtk31.5.22-2ubuntu2.1
-iio-sensor-proxy2.8-1ubuntu1
+iio-sensor-proxy2.8-1ubuntu2
 im-config0.44-1ubuntu1.3
 init-system-helpers1.57
 ippusbxd1.34-2ubuntu1
@@ -430,7 +430,7 @@ libmpfr64.0.2-1
 libmpg123-01.25.13-1
 libmtdev11.1.5-1.1
 libmutter-6-03.36.9-0ubuntu0.20.04.2
-libmysqlclient218.0.28-0ubuntu0.20.04.3
+libmysqlclient218.0.29-0ubuntu0.20.04.3
 libncurses66.2-0ubuntu2
 libncursesw66.2-0ubuntu2
 libndp01.7-0ubuntu1
