@@ -8,7 +8,7 @@ apport-symptoms0.23
 apt2.0.6
 aptdaemon1.1.1+bzr982-0ubuntu32.3
 aptdaemon-data1.1.1+bzr982-0ubuntu32.3
-apt-transport-https2.0.6
+apt-transport-https2.0.8
 apt-utils2.0.6
 aspell0.60.8-1ubuntu0.1
 aspell-en2018.04.16-0-1
@@ -58,7 +58,7 @@ distro-info-data0.43ubuntu1.10
 dnsmasq-base2.80-1.1ubuntu1.5
 dns-root-data2019052802
 docbook-xml4.5-9
-docker-ce-cli5:20.10.15~3-0~ubuntu-bionic
+docker-ce-cli5:20.10.16~3-0~ubuntu-bionic
 dpkg1.19.7ubuntu3
 e2fsprogs1.45.5-2ubuntu1
 emacsen-common3.0.4
@@ -389,7 +389,7 @@ libip6tc21.8.4-3ubuntu2
 libisl220.22.1-1
 libjack-jackd2-01.9.12~dfsg-2ubuntu2
 libjansson42.12-1build1
-libjavascriptcoregtk-4.0-182.36.0-0ubuntu0.20.04.3
+libjavascriptcoregtk-4.0-182.36.2-0ubuntu0.20.04.1
 libjbig02.1-3.1build1
 libjpeg88c-2ubuntu8
 libjpeg-turbo82.0.3-0ubuntu1.20.04.1
@@ -567,7 +567,7 @@ libtext-iconv-perl1.7-7
 libthai00.1.28-3
 libthai-data0.1.28-3
 libtheora01.1.1+dfsg.1-15ubuntu2
-libtiff54.1.0+git191117-2ubuntu0.20.04.2
+libtiff54.1.0+git191117-2ubuntu0.20.04.3
 libtinfo66.2-0ubuntu2
 libtwolame00.4.0-2
 libuchardet00.0.6-3build1
@@ -600,7 +600,7 @@ libwayland-cursor01.18.0-1
 libwayland-egl11.18.0-1
 libwayland-server01.18.0-1
 libwbclient02:4.13.17~dfsg-0ubuntu0.21.04.2
-libwebkit2gtk-4.0-372.36.0-0ubuntu0.20.04.3
+libwebkit2gtk-4.0-372.36.2-0ubuntu0.20.04.1
 libwebp60.6.1-2ubuntu0.20.04.1
 libwebpdemux20.6.1-2ubuntu0.20.04.1
 libwebrtc-audio-processing10.3.1-0ubuntu3
@@ -656,7 +656,7 @@ libxkbcommon00.10.0-1
 libxkbcommon-x11-00.10.0-1
 libxkbfile11:1.1.0-1
 libxklavier165.4-4
-libxml22.9.10+dfsg-5ubuntu0.20.04.2
+libxml22.9.10+dfsg-5ubuntu0.20.04.3
 libxmu62:1.1.3-0ubuntu1
 libxmuu12:1.1.3-0ubuntu1
 libxpm41:3.5.12-1
@@ -675,7 +675,7 @@ libxxf86vm11:1.1.4-1build1
 libyaml-0-20.2.2-1
 libyelp03.36.2-0ubuntu1
 libzstd11.4.4+dfsg-3ubuntu0.1
-locales2.31-0ubuntu9.7
+locales2.31-0ubuntu9.9
 login1:4.8.1-1ubuntu5.20.04.1
 logsave1.45.5-2ubuntu1
 lsb-base11.1.0ubuntu2
@@ -697,7 +697,7 @@ netbase6.1
 network-manager1.22.10-1ubuntu2.3
 network-manager-gnome1.8.24-1ubuntu3
 network-manager-pptp1.2.8-2
-nodejs14.19.2-deb-1nodesource1
+nodejs14.19.3-deb-1nodesource1
 obconf1:2.0.4+git20150213-2
 ocl-icd-libopencl12.2.11-1ubuntu1
 openbox3.6.1-9ubuntu0.20.04.1
