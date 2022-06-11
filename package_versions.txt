@@ -22,9 +22,9 @@ beignet-opencl-icd1.3.2-7build1
 bind9-host1:9.16.1-0ubuntu2.10
 bind9-libs1:9.16.1-0ubuntu2.10
 bluez5.53-0ubuntu3.5
-boinc-client7.20.0+dfsg+202206101348~ubuntu20.04.1
-boinc-client-opencl7.20.0+dfsg+202206101348~ubuntu20.04.1
-boinc-manager7.20.0+dfsg+202206101348~ubuntu20.04.1
+boinc-client7.20.0+dfsg+202206101603~ubuntu20.04.1
+boinc-client-opencl7.20.0+dfsg+202206101603~ubuntu20.04.1
+boinc-manager7.20.0+dfsg+202206101603~ubuntu20.04.1
 bolt0.9.1-2~ubuntu20.04.1
 bsdmainutils11.1.2ubuntu3
 bsdutils1:2.34-0.1ubuntu9.3
@@ -204,7 +204,7 @@ libavahi-glib10.7-4ubuntu7.1
 libavc1394-00.5.4-5
 libblkid12.34-0.1ubuntu9.3
 libbluetooth35.53-0ubuntu3.5
-libboinc77.20.0+dfsg+202206101348~ubuntu20.04.1
+libboinc77.20.0+dfsg+202206101603~ubuntu20.04.1
 libboost-thread1.71.01.71.0-6ubuntu6
 libbrotli11.0.7-6ubuntu0.1
 libbsd00.10.0-1
