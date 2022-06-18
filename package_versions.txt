@@ -21,7 +21,7 @@ bash5.0-6ubuntu1.1
 beignet-opencl-icd1.3.2-7build1
 bind9-host1:9.16.1-0ubuntu2.10
 bind9-libs1:9.16.1-0ubuntu2.10
-bluez5.53-0ubuntu3.5
+bluez5.53-0ubuntu3.6
 boinc-client7.20.0+dfsg+202206101603~ubuntu20.04.1
 boinc-client-opencl7.20.0+dfsg+202206101603~ubuntu20.04.1
 boinc-manager7.20.0+dfsg+202206101603~ubuntu20.04.1
@@ -30,7 +30,7 @@ bsdmainutils11.1.2ubuntu3
 bsdutils1:2.34-0.1ubuntu9.3
 bubblewrap0.4.0-1ubuntu4
 bzip21.0.8-2
-ca-certificates20210119~20.04.2
+ca-certificates20211016~20.04.1
 cheese-common3.34.0-1ubuntu1
 colord1.4.4-2
 colord-data1.4.4-2
@@ -58,7 +58,7 @@ distro-info-data0.43ubuntu1.10
 dnsmasq-base2.80-1.1ubuntu1.5
 dns-root-data2019052802
 docbook-xml4.5-9
-docker-ce-cli5:20.10.16~3-0~ubuntu-bionic
+docker-ce-cli5:20.10.17~3-0~ubuntu-bionic
 dpkg1.19.7ubuntu3
 e2fsprogs1.45.5-2ubuntu1
 emacsen-common3.0.4
@@ -203,7 +203,7 @@ libavahi-core70.7-4ubuntu7.1
 libavahi-glib10.7-4ubuntu7.1
 libavc1394-00.5.4-5
 libblkid12.34-0.1ubuntu9.3
-libbluetooth35.53-0ubuntu3.5
+libbluetooth35.53-0ubuntu3.6
 libboinc77.20.0+dfsg+202206101603~ubuntu20.04.1
 libboost-thread1.71.01.71.0-6ubuntu6
 libbrotli11.0.7-6ubuntu0.1
@@ -237,7 +237,7 @@ libcogl-path201.22.6-1
 libcolord21.4.4-2
 libcolord-gtk10.2.0-0ubuntu1
 libcolorhug21.4.4-2
-libcom-err21.45.5-2ubuntu1
+libcom-err21.45.5-2ubuntu1.1
 libcrack22.9.6-3.2
 libcrypt11:4.4.10-10ubuntu4
 libcryptsetup122:2.2.2-3ubuntu2.4
@@ -285,8 +285,8 @@ libflac81.3.3-1build1
 libfontconfig12.13.1-2ubuntu3
 libfontenc11:1.1.4-0ubuntu1
 libfprint-2-21:1.90.2+tod1-0ubuntu1~20.04.8
-libfreerdp2-22.2.0+dfsg1-0ubuntu0.20.04.2
-libfreerdp-client2-22.2.0+dfsg1-0ubuntu0.20.04.2
+libfreerdp2-22.2.0+dfsg1-0ubuntu0.20.04.3
+libfreerdp-client2-22.2.0+dfsg1-0ubuntu0.20.04.3
 libfreetype62.10.1-2ubuntu0.1
 libfribidi01.0.8-2ubuntu0.1
 libfuse22.9.9-3
@@ -397,7 +397,7 @@ libjson-c40.13.1+dfsg-7ubuntu0.3
 libjson-glib-1.0-01.4.4-2ubuntu2
 libjson-glib-1.0-common1.4.4-2ubuntu2
 libk5crypto31.17-6ubuntu4.1
-libkeyutils11.6-6ubuntu1
+libkeyutils11.6-6ubuntu1.1
 libkmod227-1ubuntu2.1
 libkrb5-26-heimdal7.7.0+dfsg-1ubuntu1
 libkrb5-31.17-6ubuntu4.1
@@ -607,7 +607,7 @@ libwebrtc-audio-processing10.3.1-0ubuntu3
 libwhoopsie00.2.69ubuntu0.3
 libwhoopsie-preferences022
 libwind0-heimdal7.7.0+dfsg-1ubuntu1
-libwinpr2-22.2.0+dfsg1-0ubuntu0.20.04.2
+libwinpr2-22.2.0+dfsg1-0ubuntu0.20.04.3
 libwoff11.0.2-1build2
 libwrap07.6.q-30
 libwxbase3.0-0v53.0.4+dfsg-15build1
