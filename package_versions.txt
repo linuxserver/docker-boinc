@@ -8,7 +8,7 @@ apport-symptoms0.23
 apt2.0.8
 aptdaemon1.1.1+bzr982-0ubuntu32.3
 aptdaemon-data1.1.1+bzr982-0ubuntu32.3
-apt-transport-https2.0.8
+apt-transport-https2.0.9
 apt-utils2.0.8
 aspell0.60.8-1ubuntu0.1
 aspell-en2018.04.16-0-1
@@ -416,10 +416,10 @@ liblzma55.2.4-1ubuntu1.1
 libmagic11:5.38-4
 libmagic-mgc1:5.38-4
 libmaxminddb01.4.2-0ubuntu1.20.04.1
-libmbim-glib41.24.8-1~20.04
-libmbim-proxy1.24.8-1~20.04
+libmbim-glib41.26.2-1~ubuntu20.04.1
+libmbim-proxy1.26.2-1~ubuntu20.04.1
 libmediaart-2.0-01.9.4-2
-libmm-glib01.16.6-2~20.04.1
+libmm-glib01.18.6-1~ubuntu20.04.1
 libmnl01.0.4-2
 libmount12.34-0.1ubuntu9.3
 libmozjs-68-068.6.0-1ubuntu1
@@ -503,8 +503,8 @@ libpython3.83.8.10-0ubuntu1~20.04.4
 libpython3.8-minimal3.8.10-0ubuntu1~20.04.4
 libpython3.8-stdlib3.8.10-0ubuntu1~20.04.4
 libpython3-stdlib3.8.2-0ubuntu2
-libqmi-glib51.28.6-1~20.04.1
-libqmi-proxy1.28.6-1~20.04.1
+libqmi-glib51.30.4-1~ubuntu20.04.1
+libqmi-proxy1.30.4-1~ubuntu20.04.1
 libraw1394-112.1.2-1
 libreadline88.0-4
 librest-0.7-00.8.1-1
@@ -685,7 +685,7 @@ mawk1.3.4.20200120-2
 mesa-vulkan-drivers21.2.6-0ubuntu0.1~20.04.2
 mime-support3.64ubuntu1
 mobile-broadband-provider-info20190618-3
-modemmanager1.16.6-2~20.04.1
+modemmanager1.18.6-1~ubuntu20.04.1
 mount2.34-0.1ubuntu9.3
 mousetweaks3.32.0-2
 mutter3.36.9-0ubuntu0.20.04.2
