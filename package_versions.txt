@@ -242,7 +242,7 @@ libcrack22.9.6-3.2
 libcrypt11:4.4.10-10ubuntu4
 libcryptsetup122:2.2.2-3ubuntu2.4
 libcups22.3.1-9ubuntu1.2
-libcurl3-gnutls7.68.0-1ubuntu2.11
+libcurl3-gnutls7.68.0-1ubuntu2.12
 libcurl47.68.0-1ubuntu2.11
 libdaemon00.14-7
 libdatrie10.2.12-3
