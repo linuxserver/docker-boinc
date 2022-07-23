@@ -363,7 +363,7 @@ libgusb20.3.4-0.1
 libgweather-3-163.36.1-1~ubuntu20.04.1
 libgweather-common3.36.1-1~ubuntu20.04.1
 libharfbuzz0b2.6.4-1ubuntu4
-libharfbuzz-icu02.6.4-1ubuntu4
+libharfbuzz-icu02.6.4-1ubuntu4.2
 libhcrypto4-heimdal7.7.0+dfsg-1ubuntu1
 libheimbase1-heimdal7.7.0+dfsg-1ubuntu1
 libheimntlm0-heimdal7.7.0+dfsg-1ubuntu1
@@ -748,7 +748,7 @@ python3-gi3.36.0-1
 python3-httplib20.14.0-1ubuntu1
 python3-ibus-1.01.5.22-2ubuntu2.1
 python3-idna2.8-1
-python3-jwt1.7.1-2ubuntu2
+python3-jwt1.7.1-2ubuntu2.1
 python3-keyring18.0.1-2ubuntu1
 python3-launchpadlib1.10.13-1
 python3-lazr.restfulclient0.14.2-2build1
