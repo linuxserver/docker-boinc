@@ -86,7 +86,7 @@ gir1.2-freedesktop1.64.1-1~ubuntu20.04.1
 gir1.2-gck-13.36.0-2build1
 gir1.2-gcr-33.36.0-2build1
 gir1.2-gdesktopenums-3.03.36.0-1ubuntu1
-gir1.2-gdkpixbuf-2.02.40.0+dfsg-3ubuntu0.2
+gir1.2-gdkpixbuf-2.02.40.0+dfsg-3ubuntu0.3
 gir1.2-gdm-1.03.36.3-0ubuntu0.20.04.4
 gir1.2-geoclue-2.02.5.6-0ubuntu1
 gir1.2-glib-2.01.64.1-1~ubuntu20.04.1
@@ -145,11 +145,11 @@ grep3.4-1
 groff-base1.22.4-4build1
 gsettings-desktop-schemas3.36.0-1ubuntu1
 gstreamer1.0-clutter-3.03.0.27-1
-gstreamer1.0-gl1.16.3-0ubuntu1
-gstreamer1.0-plugins-base1.16.3-0ubuntu1
-gstreamer1.0-plugins-good1.16.3-0ubuntu1
-gstreamer1.0-pulseaudio1.16.3-0ubuntu1
-gstreamer1.0-x1.16.3-0ubuntu1
+gstreamer1.0-gl1.16.3-0ubuntu1.1
+gstreamer1.0-plugins-base1.16.3-0ubuntu1.1
+gstreamer1.0-plugins-good1.16.3-0ubuntu1.1
+gstreamer1.0-pulseaudio1.16.3-0ubuntu1.1
+gstreamer1.0-x1.16.3-0ubuntu1.1
 gtk-update-icon-cache3.24.20-0ubuntu1.1
 guacd1.1.0-1
 gzip1.10-0ubuntu4
@@ -345,9 +345,9 @@ libgssapi3-heimdal7.7.0+dfsg-1ubuntu1
 libgssapi-krb5-21.17-6ubuntu4.1
 libgssdp-1.2-01.2.3-0ubuntu0.20.04.1
 libgstreamer1.0-01.16.3-0ubuntu1
-libgstreamer-gl1.0-01.16.3-0ubuntu1
+libgstreamer-gl1.0-01.16.3-0ubuntu1.1
 libgstreamer-plugins-base1.0-01.16.3-0ubuntu1
-libgstreamer-plugins-good1.0-01.16.3-0ubuntu1
+libgstreamer-plugins-good1.0-01.16.3-0ubuntu1.1
 libgtk2.0-02.24.32-4ubuntu4
 libgtk2.0-bin2.24.32-4ubuntu4
 libgtk2.0-common2.24.32-4ubuntu4
