@@ -242,7 +242,7 @@ libcrack22.9.6-3.2
 libcrypt11:4.4.10-10ubuntu4
 libcryptsetup122:2.2.2-3ubuntu2.4
 libcups22.3.1-9ubuntu1.2
-libcurl3-gnutls7.68.0-1ubuntu2.12
+libcurl3-gnutls7.68.0-1ubuntu2.13
 libcurl47.68.0-1ubuntu2.12
 libdaemon00.14-7
 libdatrie10.2.12-3
@@ -729,7 +729,7 @@ python33.8.2-0ubuntu2
 python3.83.8.10-0ubuntu1~20.04.5
 python3.8-minimal3.8.10-0ubuntu1~20.04.5
 python3-apport2.20.11-0ubuntu27.24
-python3-apt2.0.0ubuntu0.20.04.7
+python3-apt2.0.0ubuntu0.20.04.8
 python3-aptdaemon1.1.1+bzr982-0ubuntu32.3
 python3-aptdaemon.gtk3widgets1.1.1+bzr982-0ubuntu32.3
 python3-blinker1.4+dfsg1-0.3ubuntu1
@@ -774,7 +774,7 @@ python3-talloc2.3.1-0ubuntu0.20.04.1
 python3-tz2019.3-1
 python3-urllib31.25.8-2ubuntu0.1
 python3-wadllib1.3.3-3build1
-python-apt-common2.0.0ubuntu0.20.04.7
+python-apt-common2.0.0ubuntu0.20.04.8
 python-is-python22.7.17-4
 python-xdg0.26-1ubuntu1
 readline-common8.0-4
