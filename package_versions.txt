@@ -86,7 +86,7 @@ gir1.2-freedesktop1.64.1-1~ubuntu20.04.1
 gir1.2-gck-13.36.0-2build1
 gir1.2-gcr-33.36.0-2build1
 gir1.2-gdesktopenums-3.03.36.0-1ubuntu1
-gir1.2-gdkpixbuf-2.02.40.0+dfsg-3ubuntu0.3
+gir1.2-gdkpixbuf-2.02.40.0+dfsg-3ubuntu0.4
 gir1.2-gdm-1.03.36.3-0ubuntu0.20.04.4
 gir1.2-geoclue-2.02.5.6-0ubuntu1
 gir1.2-glib-2.01.64.1-1~ubuntu20.04.1
@@ -389,7 +389,7 @@ libip6tc21.8.4-3ubuntu2
 libisl220.22.1-1
 libjack-jackd2-01.9.12~dfsg-2ubuntu2
 libjansson42.12-1build1
-libjavascriptcoregtk-4.0-182.36.6-0ubuntu0.20.04.1
+libjavascriptcoregtk-4.0-182.36.7-0ubuntu0.20.04.1
 libjbig02.1-3.1build1
 libjpeg88c-2ubuntu8
 libjpeg-turbo82.0.3-0ubuntu1.20.04.1
@@ -601,7 +601,7 @@ libwayland-cursor01.18.0-1
 libwayland-egl11.18.0-1
 libwayland-server01.18.0-1
 libwbclient02:4.13.17~dfsg-0ubuntu1.20.04.1
-libwebkit2gtk-4.0-372.36.6-0ubuntu0.20.04.1
+libwebkit2gtk-4.0-372.36.7-0ubuntu0.20.04.1
 libwebp60.6.1-2ubuntu0.20.04.1
 libwebpdemux20.6.1-2ubuntu0.20.04.1
 libwebrtc-audio-processing10.3.1-0ubuntu3
