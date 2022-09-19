@@ -97,6 +97,8 @@ services:
   boinc:
     image: lscr.io/linuxserver/boinc:latest
     container_name: boinc
+    security_opt:
+      - seccomp:unconfined #optional
     environment:
       - PUID=1000
       - PGID=1000
@@ -116,6 +118,7 @@ services:
 ```bash
 docker run -d \
   --name=boinc \
+  --security-opt seccomp=unconfined `#optional` \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
@@ -140,6 +143,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PASSWORD=` | Optionally set a password for the gui. |
 | `-v /config` | Where BOINC should store its database and config. |
 | `--device /dev/dri` | Only needed if you want to use your Intel GPU (vaapi). |
+| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker. |
 
 ## Environment variables from files (Docker secrets)
 
