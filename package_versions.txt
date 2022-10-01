@@ -195,7 +195,7 @@ libimlib21.7.4-1build1
 libip4tc21.8.7-1ubuntu5
 libisl230.24-2build1
 libjack-jackd2-01.9.20~dfsg-1
-libjavascriptcoregtk-4.0-182.36.7-0ubuntu0.22.04.1
+libjavascriptcoregtk-4.0-182.36.8-0ubuntu0.22.04.1
 libjbig02.1-3.1build3
 libjpeg88c-2ubuntu10
 libjpeg-turbo82.1.2-0ubuntu1
@@ -340,7 +340,7 @@ libwayland-client01.20.0-1ubuntu0.1
 libwayland-cursor01.20.0-1ubuntu0.1
 libwayland-egl11.20.0-1ubuntu0.1
 libwayland-server01.20.0-1ubuntu0.1
-libwebkit2gtk-4.0-372.36.7-0ubuntu0.22.04.1
+libwebkit2gtk-4.0-372.36.8-0ubuntu0.22.04.1
 libwebp71.2.2-2
 libwebpdemux21.2.2-2
 libwebrtc-audio-processing10.3.1-0ubuntu5
@@ -415,7 +415,7 @@ ncurses-base6.3-2
 ncurses-bin6.3-2
 netcat1.218-4ubuntu1
 netcat-openbsd1.218-4ubuntu1
-nodejs16.17.0-deb-1nodesource1
+nodejs16.17.1-deb-1nodesource1
 obconf1:2.0.4+git20150213-2build1
 ocl-icd-libopencl12.2.14-3
 openbox3.6.1-10
