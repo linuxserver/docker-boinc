@@ -29,6 +29,8 @@ RUN \
     boinc-client-opencl \
     boinc-manager && \
   ln -s libOpenCL.so.1 /usr/lib/x86_64-linux-gnu/libOpenCL.so && \
+  mkdir -p /etc/OpenCL/vendors && \
+  echo "/lib/x86_64-linux-gnu/libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
