@@ -78,6 +78,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "14.11.22:", desc: "Fix opencl driver." }
   - { date: "18.09.22:", desc: "Rebase to jammy." }
   - { date: "24.02.22:", desc: "Rebase to focal." }
   - { date: "31.01.22:", desc: "Improve device permissions setting verbosity." }
