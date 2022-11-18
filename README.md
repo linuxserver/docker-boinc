@@ -254,6 +254,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **14.11.22:** - Fix opencl driver.
 * **18.09.22:** - Rebase to jammy.
 * **24.02.22:** - Rebase to focal.
 * **31.01.22:** - Improve device permissions setting verbosity.
