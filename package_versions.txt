@@ -6,9 +6,9 @@ apt-utils2.4.8
 base-files12ubuntu4.2
 base-passwd3.5.52build1
 bash5.1-6ubuntu1
-boinc-client7.20.4+dfsg+202211230946~ubuntu22.04.1
-boinc-client-opencl7.20.4+dfsg+202211230946~ubuntu22.04.1
-boinc-manager7.20.4+dfsg+202211230946~ubuntu22.04.1
+boinc-client7.20.5+dfsg+202212021500~ubuntu22.04.1
+boinc-client-opencl7.20.5+dfsg+202212021500~ubuntu22.04.1
+boinc-manager7.20.5+dfsg+202212021500~ubuntu22.04.1
 bsdextrautils2.37.2-4ubuntu3
 bsdutils1:2.37.2-4ubuntu3
 bubblewrap0.6.1-1
@@ -96,7 +96,7 @@ libavahi-common30.8-5ubuntu5
 libavahi-common-data0.8-5ubuntu5
 libavc1394-00.5.4-5build2
 libblkid12.37.2-4ubuntu3
-libboinc77.20.4+dfsg+202211230946~ubuntu22.04.1
+libboinc77.20.5+dfsg+202212021500~ubuntu22.04.1
 libbrotli11.0.9-2build6
 libbsd00.11.5-1
 libbz2-1.01.0.8-5build1
