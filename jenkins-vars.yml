@@ -7,6 +7,7 @@ custom_version_command: "curl -sX GET http://ppa.launchpad.net/costamagnagianfra
 release_type: stable
 release_tag: latest
 ls_branch: master
+build_armhf: false
 repo_vars:
   - BUILD_VERSION_ARG = 'BOINC_RELEASE'
   - LS_USER = 'linuxserver'
