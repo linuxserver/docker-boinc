@@ -29,6 +29,7 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     ${BOINC} \
+    at-spi2-core \
     boinc-manager && \
   echo "**** cleanup ****" && \
   apt-get clean && \

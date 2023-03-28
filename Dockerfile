@@ -29,6 +29,7 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     ${BOINC} \
+    at-spi2-core \
     boinc-client-opencl \
     boinc-manager && \
   ln -s libOpenCL.so.1 /usr/lib/x86_64-linux-gnu/libOpenCL.so && \
