@@ -105,7 +105,7 @@ app_setup_block: |
   This container is capable of delivering a true lossless image at a high framerate to your web browser by changing the Stream Quality preset to "Lossless", more information [here](https://www.kasmweb.com/docs/latest/how_to/lossless.html#technical-background). In order to use this mode from a non localhost endpoint the HTTPS port on 8181 needs to be used. If using a reverse proxy to port 8080 specific headers will need to be set as outlined [here](https://github.com/linuxserver/docker-baseimage-kasmvnc#lossless).
 # changelog
 changelogs:
-  - { date: "18.03.23:", desc: "Rebase to KasmVNC base image." }
+  - { date: "03.04.23:", desc: "Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils." }
   - { date: "14.11.22:", desc: "Fix opencl driver." }
   - { date: "18.09.22:", desc: "Rebase to jammy." }
   - { date: "24.02.22:", desc: "Rebase to focal." }

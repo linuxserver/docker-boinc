@@ -30,7 +30,9 @@ RUN \
   apt-get install -y --no-install-recommends \
     ${BOINC} \
     at-spi2-core \
-    boinc-manager && \
+    boinc-manager \
+    bzip2 \
+    xz-utils && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
