@@ -286,7 +286,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **18.03.23:** - Rebase to KasmVNC base image.
+* **03.04.23:** - Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils.
 * **14.11.22:** - Fix opencl driver.
 * **18.09.22:** - Rebase to jammy.
 * **24.02.22:** - Rebase to focal.
