@@ -8,10 +8,7 @@ mkdir -p \
 # clean up old PIDs
 rm -rf "/config/BOINC Manager-abc"
 
-if [ -n "$PASSWORD" ]; then
-    echo "abc:${PASSWORD}" | chpasswd
-    echo "**** Setting password from environment variable. ****"
-else
+if [ ! -n "$PASSWORD" ]; then
     echo "**** No auth enabled. To enable auth, you can set the PASSWORD var in docker arguments. ****"
 fi
 

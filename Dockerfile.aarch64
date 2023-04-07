@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arm64v8-jammy
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:arm64v8-ubuntujammy
 
 # set version label
 ARG BUILD_DATE
@@ -11,7 +11,10 @@ LABEL maintainer="aptalca"
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 
 # global environment settings
-ENV DEBIAN_FRONTEND="noninteractive" CUSTOM_PORT="8080"
+ENV DEBIAN_FRONTEND="noninteractive" \
+    CUSTOM_PORT="8080" \
+    CUSTOM_HTTPS_PORT="8181" \
+    TITLE=BOINC
 
 RUN \
   echo "**** install packages ****" && \
@@ -26,7 +29,10 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     ${BOINC} \
-    boinc-manager && \
+    at-spi2-core \
+    boinc-manager \
+    bzip2 \
+    xz-utils && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \

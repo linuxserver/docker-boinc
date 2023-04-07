@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:jammy
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 # set version label
 ARG BUILD_DATE
@@ -11,7 +11,10 @@ LABEL maintainer="aptalca"
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 
 # global environment settings
-ENV DEBIAN_FRONTEND="noninteractive" CUSTOM_PORT="8080"
+ENV DEBIAN_FRONTEND="noninteractive" \
+    CUSTOM_PORT="8080" \
+    CUSTOM_HTTPS_PORT="8181" \
+    TITLE=BOINC
 
 RUN \
   echo "**** install packages ****" && \
@@ -26,8 +29,11 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     ${BOINC} \
+    at-spi2-core \
     boinc-client-opencl \
-    boinc-manager && \
+    boinc-manager \
+    bzip2 \
+    xz-utils && \
   ln -s libOpenCL.so.1 /usr/lib/x86_64-linux-gnu/libOpenCL.so && \
   mkdir -p /etc/OpenCL/vendors && \
   echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd && \
