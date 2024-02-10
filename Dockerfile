@@ -17,6 +17,10 @@ ENV DEBIAN_FRONTEND="noninteractive" \
     TITLE=BOINC
 
 RUN \
+  echo "**** add icon ****" && \
+  curl -o \
+    /kclient/public/icon.png \
+    https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/boinc-icon.png && \
   echo "**** install packages ****" && \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys E36CE452F7C2AE96FB1354901BCB19E03C2A1859 && \
   echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu jammy main" >> /etc/apt/sources.list.d/boinc.list && \
