@@ -1,4 +1,6 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:arm64v8-ubuntujammy
+# syntax=docker/dockerfile:1
+
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:arm64v8-ubuntunoble
 
 # set version label
 ARG BUILD_DATE
@@ -37,6 +39,7 @@ RUN \
     boinc-manager \
     bzip2 \
     xz-utils && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
