@@ -1,4 +1,6 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
+# syntax=docker/dockerfile:1
+
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
 
 # set version label
 ARG BUILD_DATE
@@ -23,8 +25,8 @@ RUN \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/boinc-icon.png && \
   echo "**** install packages ****" && \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys E36CE452F7C2AE96FB1354901BCB19E03C2A1859 && \
-  echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu jammy main" >> /etc/apt/sources.list.d/boinc.list && \
-  echo "deb-src http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu jammy main" >> /etc/apt/sources.list.d/boinc.list && \
+  echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
+  echo "deb-src http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
   if [ -z ${BOINC_VERSION+x} ]; then \
     BOINC="boinc-client"; \
   else \
@@ -41,6 +43,7 @@ RUN \
   ln -s libOpenCL.so.1 /usr/lib/x86_64-linux-gnu/libOpenCL.so && \
   mkdir -p /etc/OpenCL/vendors && \
   echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \

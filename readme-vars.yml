@@ -19,32 +19,20 @@ development_versions: false
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
-param_usage_include_net: false
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/data", desc: "Where BOINC should store its database and config." }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Where BOINC should store its database and config." }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "8080", internal_port: "8080", port_desc: "Boinc desktop gui." }
   - { external_port: "8181", internal_port: "8181", port_desc: "Boinc desktop gui HTTPS." }
-param_device_map: false
-cap_add_param: false
-cap_add_param_vars: ''
-
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "PASSWORD", env_value: "", desc: "Optionally set a password for the gui." }
-opt_param_usage_include_vols: false
-opt_param_usage_include_ports: false
 opt_param_device_map: true
 opt_param_devices:
   - { device_path: "/dev/dri", device_host_path: "/dev/dri", desc: "Only needed if you want to use your Intel GPU (vaapi)." }
-opt_cap_add_param: false
-optional_block_1: false
 opt_security_opt_param: true
 opt_security_opt_param_vars:
   - { run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker." }
@@ -122,6 +110,7 @@ app_setup_block: |
   This container is capable of delivering a true lossless image at a high framerate to your web browser by changing the Stream Quality preset to "Lossless", more information [here](https://www.kasmweb.com/docs/latest/how_to/lossless.html#technical-background). In order to use this mode from a non localhost endpoint the HTTPS port on 8181 needs to be used. If using a reverse proxy to port 8080 specific headers will need to be set as outlined [here](https://github.com/linuxserver/docker-baseimage-kasmvnc#lossless).
 # changelog
 changelogs:
+  - { date: "19.08.24:", desc: "Rebase to noble." }
   - { date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon." }
   - { date: "03.04.23:", desc: "Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils." }
   - { date: "14.11.22:", desc: "Fix opencl driver." }

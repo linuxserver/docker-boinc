@@ -148,7 +148,7 @@ services:
       - TZ=Etc/UTC
       - PASSWORD= #optional
     volumes:
-      - /path/to/data:/config
+      - /path/to/boinc/config:/config
     ports:
       - 8080:8080
       - 8181:8181
@@ -169,7 +169,7 @@ docker run -d \
   -e PASSWORD= `#optional` \
   -p 8080:8080 \
   -p 8181:8181 \
-  -v /path/to/data:/config \
+  -v /path/to/boinc/config:/config \
   --device /dev/dri:/dev/dri `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/boinc:latest
@@ -352,6 +352,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.08.24:** - Rebase to noble.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
 * **03.04.23:** - Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils.
 * **14.11.22:** - Fix opencl driver.
