@@ -24,9 +24,9 @@ RUN \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/boinc-icon.png && \
   echo "**** install packages ****" && \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys E36CE452F7C2AE96FB1354901BCB19E03C2A1859 && \
-  echo "deb http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
-  echo "deb-src http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
+  curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xB991272AA858DEF3B0FF0C839FB27DC84490895D" | gpg --dearmor | tee /usr/share/keyrings/boinc.gpg >/dev/null && \
+  echo "deb [arch=arm64 signed-by=/usr/share/keyrings/boinc.gpg] http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" > /etc/apt/sources.list.d/boinc.list && \
+  echo "deb-src [arch=arm64 signed-by=/usr/share/keyrings/boinc.gpg] http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
   if [ -z ${BOINC_VERSION+x} ]; then \
     BOINC="boinc-client"; \
   else \
