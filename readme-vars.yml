@@ -7,43 +7,38 @@ project_logo: "https://raw.githubusercontent.com/BOINC/boinc/master/doc/logo/boi
 project_blurb: "[BOINC]({{ project_url }}) is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # development version
 development_versions: false
-
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Where BOINC should store its database and config." }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Where BOINC should store its database and config."}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "8080", internal_port: "8080", port_desc: "Boinc desktop gui." }
-  - { external_port: "8181", internal_port: "8181", port_desc: "Boinc desktop gui HTTPS." }
+  - {external_port: "8080", internal_port: "8080", port_desc: "Boinc desktop gui."}
+  - {external_port: "8181", internal_port: "8181", port_desc: "Boinc desktop gui HTTPS."}
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "PASSWORD", env_value: "", desc: "Optionally set a password for the gui." }
+  - {env_var: "PASSWORD", env_value: "", desc: "Optionally set a password for the gui."}
 opt_param_device_map: true
 opt_param_devices:
-  - { device_path: "/dev/dri", device_host_path: "/dev/dri", desc: "Only needed if you want to use your Intel GPU (vaapi)." }
+  - {device_path: "/dev/dri", device_host_path: "/dev/dri", desc: "Only needed if you want to use your Intel GPU (vaapi)."}
 opt_security_opt_param: true
 opt_security_opt_param_vars:
-  - { run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker." }
-
+  - {run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker."}
 # Kasm blurb settings
 kasm_blurb: true
 show_nvidia: true
 external_http_port: "8080"
 external_https_port: "8181"
 noto_fonts: "fonts-noto-cjk"
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -51,18 +46,83 @@ app_setup_block: |
 
   * http://yourhost:8080/
   * https://yourhost:8181/
-
+# init diagram
+init_diagram: |
+  "boinc:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-kasmvnc-end -> init-boinc-config
+    init-kasmvnc-end -> init-config
+    init-os-end -> init-config
+    init-boinc-config -> init-config-end
+    init-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-os-end -> init-kasmvnc
+    init-nginx -> init-kasmvnc-config
+    init-video -> init-kasmvnc-end
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-kasmvnc -> init-nginx
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-kasmvnc-config -> init-video
+    init-services -> svc-boinc-client
+    svc-boinc-client -> legacy-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-de
+    svc-nginx -> svc-de
+    svc-de -> legacy-services
+    init-services -> svc-docker
+    svc-de -> svc-docker
+    svc-docker -> legacy-services
+    init-services -> svc-kasmvnc
+    svc-pulseaudio -> svc-kasmvnc
+    svc-kasmvnc -> legacy-services
+    init-services -> svc-kclient
+    svc-kasmvnc -> svc-kclient
+    svc-kclient -> legacy-services
+    init-services -> svc-nginx
+    svc-kclient -> svc-nginx
+    svc-nginx -> legacy-services
+    init-services -> svc-pulseaudio
+    svc-pulseaudio -> legacy-services
+  }
+  Base Images: {
+    "baseimage-kasmvnc:ubuntunoble" <- "baseimage-ubuntu:noble"
+  }
+  "boinc:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "19.08.24:", desc: "Rebase to noble." }
-  - { date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon." }
-  - { date: "03.04.23:", desc: "Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils." }
-  - { date: "14.11.22:", desc: "Fix opencl driver." }
-  - { date: "18.09.22:", desc: "Rebase to jammy." }
-  - { date: "24.02.22:", desc: "Rebase to focal." }
-  - { date: "31.01.22:", desc: "Improve device permissions setting verbosity." }
-  - { date: "23.03.21:", desc: "Rebase to rdesktop-web baseimage. Deprecate `GUAC_USER` and `GUAC_PASS` env vars. Existing users can set the new var `PASSWORD` for the user `abc`." }
-  - { date: "01.04.20:", desc: "Install boinc from ppa." }
-  - { date: "17.03.20:", desc: "Add armhf and aarch64 builds and switch to multi-arch image." }
-  - { date: "16.03.20:", desc: "Clean up old pid files." }
-  - { date: "15.03.20:", desc: "Initial release." }
+  - {date: "19.08.24:", desc: "Rebase to noble."}
+  - {date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon."}
+  - {date: "03.04.23:", desc: "Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils."}
+  - {date: "14.11.22:", desc: "Fix opencl driver."}
+  - {date: "18.09.22:", desc: "Rebase to jammy."}
+  - {date: "24.02.22:", desc: "Rebase to focal."}
+  - {date: "31.01.22:", desc: "Improve device permissions setting verbosity."}
+  - {date: "23.03.21:", desc: "Rebase to rdesktop-web baseimage. Deprecate `GUAC_USER` and `GUAC_PASS` env vars. Existing users can set the new var `PASSWORD` for the user `abc`."}
+  - {date: "01.04.20:", desc: "Install boinc from ppa."}
+  - {date: "17.03.20:", desc: "Add armhf and aarch64 builds and switch to multi-arch image."}
+  - {date: "16.03.20:", desc: "Clean up old pid files."}
+  - {date: "15.03.20:", desc: "Initial release."}
