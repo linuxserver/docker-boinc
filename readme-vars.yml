@@ -33,6 +33,7 @@ opt_param_devices:
 opt_security_opt_param: true
 opt_security_opt_param_vars:
   - {run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker."}
+readme_hwaccel: true
 # Kasm blurb settings
 kasm_blurb: true
 show_nvidia: true
