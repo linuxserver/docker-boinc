@@ -64,6 +64,31 @@ The container can be accessed at:
 * http://yourhost:8080/
 * https://yourhost:8181/
 
+### Hardware Acceleration
+
+Many desktop applications need access to a GPU to function properly and even some Desktop Environments have compositor effects that will not function without a GPU. However this is not a hard requirement and all base images will function without a video device mounted into the container.
+
+#### Intel/ATI/AMD
+
+To leverage hardware acceleration you will need to mount /dev/dri video device inside of the container.
+
+```text
+--device=/dev/dri:/dev/dri
+```
+
+We will automatically ensure the abc user inside of the container has the proper permissions to access this device.
+
+#### Nvidia
+
+Hardware acceleration users for Nvidia will need to install the container runtime provided by Nvidia on their host, instructions can be found here:
+https://github.com/NVIDIA/nvidia-container-toolkit
+
+We automatically add the necessary environment variable that will utilise all the features available on a GPU on the host. Once nvidia-container-toolkit is installed on your host you will need to re/create the docker container with the nvidia container runtime `--runtime=nvidia` and add an environment variable `-e NVIDIA_VISIBLE_DEVICES=all` (can also be set to a specific gpu's UUID, this can be discovered by running `nvidia-smi --query-gpu=gpu_name,gpu_uuid --format=csv` ). NVIDIA automatically mounts the GPU and drivers from your host into the container.
+
+#### Arm Devices
+
+Best effort is made to install tools to allow mounting in /dev/dri on Arm devices. In most cases if /dev/dri exists on the host it should just work. If running a Raspberry Pi 4 be sure to enable `dtoverlay=vc4-fkms-v3d` in your usercfg.txt.
+
 **Modern GUI desktop apps have issues with the latest Docker and syscall compatibility, you can use Docker with the `--security-opt seccomp=unconfined` setting to allow these syscalls on hosts with older Kernels or libseccomp**
 
 ### Security
@@ -117,7 +142,7 @@ To install cjk fonts on startup as an example pass the environment variables (Al
 
 The web interface has the option for "IME Input Mode" in Settings which will allow non english characters to be used from a non en_US keyboard on the client. Once enabled it will perform the same as a local Linux installation set to your locale.
 
-### DRI3 GPU Acceleration
+### DRI3 GPU Acceleration (KasmVNC interface)
 
 For accelerated apps or games, render devices can be mounted into the container and leveraged by applications using:
 
@@ -134,7 +159,7 @@ This feature only supports **Open Source** GPU drivers:
 The `DRINODE` environment variable can be used to point to a specific GPU.
 Up to date information can be found [here](https://www.kasmweb.com/kasmvnc/docs/master/gpu_acceleration.html)
 
-### Nvidia GPU Support
+### Nvidia GPU Support (KasmVNC interface)
 
 **Nvidia support is not compatible with Alpine based images as Alpine lacks Nvidia drivers**
 
@@ -188,31 +213,6 @@ It is possible to install extra packages during container start using [universal
     - DOCKER_MODS=linuxserver/mods:universal-package-install
     - INSTALL_PACKAGES=libfuse2|git|gdb
 ```
-
-### Hardware Acceleration
-
-Many desktop applications need access to a GPU to function properly and even some Desktop Environments have compositor effects that will not function without a GPU. However this is not a hard requirement and all base images will function without a video device mounted into the container.
-
-#### Intel/ATI/AMD
-
-To leverage hardware acceleration you will need to mount /dev/dri video device inside of the container.
-
-```text
---device=/dev/dri:/dev/dri
-```
-
-We will automatically ensure the abc user inside of the container has the proper permissions to access this device.
-
-#### Nvidia
-
-Hardware acceleration users for Nvidia will need to install the container runtime provided by Nvidia on their host, instructions can be found here:
-https://github.com/NVIDIA/nvidia-container-toolkit
-
-We automatically add the necessary environment variable that will utilise all the features available on a GPU on the host. Once nvidia-container-toolkit is installed on your host you will need to re/create the docker container with the nvidia container runtime `--runtime=nvidia` and add an environment variable `-e NVIDIA_VISIBLE_DEVICES=all` (can also be set to a specific gpu's UUID, this can be discovered by running `nvidia-smi --query-gpu=gpu_name,gpu_uuid --format=csv` ). NVIDIA automatically mounts the GPU and drivers from your host into the container.
-
-#### Arm Devices
-
-Best effort is made to install tools to allow mounting in /dev/dri on Arm devices. In most cases if /dev/dri exists on the host it should just work. If running a Raspberry Pi 4 be sure to enable `dtoverlay=vc4-fkms-v3d` in your usercfg.txt.
 
 ## Usage
 
