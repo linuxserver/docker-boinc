@@ -22,7 +22,7 @@ param_volumes:
   - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Where BOINC should store its database and config."}
 param_usage_include_ports: true
 param_ports:
-  - {external_port: "8080", internal_port: "8080", port_desc: "Boinc desktop gui."}
+  - {external_port: "8080", internal_port: "8080", port_desc: "Boinc desktop gui HTTP (only to be used by reverse proxies and not direct access)."}
   - {external_port: "8181", internal_port: "8181", port_desc: "Boinc desktop gui HTTPS."}
 # optional container parameters
 opt_param_usage_include_env: true
@@ -36,7 +36,7 @@ opt_security_opt_param_vars:
   - {run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker."}
 readme_hwaccel: true
 # Kasm blurb settings
-kasm_blurb: true
+selkies_blurb: true
 show_nvidia: true
 external_http_port: "8080"
 external_https_port: "8181"
@@ -114,6 +114,7 @@ init_diagram: |
   "boinc:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "07.07.25:", desc: "Rebase to selkies. Breaking change: HTTPS is now required. Use port 8181 with HTTPS for direct access. Reverse proxies can connect to 8080 over http as long as it's served over HTTPS to the user."}
   - {date: "19.08.24:", desc: "Rebase to noble."}
   - {date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon."}
   - {date: "03.04.23:", desc: "Rebase to KasmVNC base image. Deprecate armhf build as the new base does not support it. Add bzip2 and xz-utils."}
