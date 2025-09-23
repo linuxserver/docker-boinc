@@ -248,8 +248,6 @@ services:
   boinc:
     image: lscr.io/linuxserver/boinc:latest
     container_name: boinc
-    security_opt:
-      - seccomp:unconfined #optional
     environment:
       - PUID=1000
       - PGID=1000
@@ -262,6 +260,7 @@ services:
       - 8181:8181
     devices:
       - /dev/dri:/dev/dri #optional
+    shm_size: "1gb"
     restart: unless-stopped
 ```
 
@@ -270,7 +269,6 @@ services:
 ```bash
 docker run -d \
   --name=boinc \
-  --security-opt seccomp=unconfined `#optional` \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
@@ -279,6 +277,7 @@ docker run -d \
   -p 8181:8181 \
   -v /path/to/boinc/config:/config \
   --device /dev/dri:/dev/dri `#optional` \
+  --shm-size="1gb" \
   --restart unless-stopped \
   lscr.io/linuxserver/boinc:latest
 ```
@@ -297,7 +296,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PASSWORD=` | Optionally set a password for the gui. |
 | `-v /config` | Where BOINC should store its database and config. |
 | `--device /dev/dri` | Only needed if you want to use your Intel GPU (vaapi). |
-| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker. |
+| `--shm-size=` | Recommended for all desktop images. |
 
 ## Environment variables from files (Docker secrets)
 
