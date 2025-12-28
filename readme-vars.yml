@@ -122,6 +122,7 @@ init_diagram: |
   "boinc:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "28.12.25:", desc: "Add Wayland init logic."}
   - {date: "07.07.25:", desc: "Rebase to selkies. Breaking change: HTTPS is now required. Use port 8181 with HTTPS for direct access. Reverse proxies can connect to 8080 over http as long as it's served over HTTPS to the user."}
   - {date: "19.08.24:", desc: "Rebase to noble."}
   - {date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon."}
