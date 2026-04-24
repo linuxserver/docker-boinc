@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-selkies:ubuntunoble
+FROM ghcr.io/linuxserver/baseimage-selkies:ubunturesolute
 
 # set version label
 ARG BUILD_DATE
@@ -16,7 +16,9 @@ ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 ENV DEBIAN_FRONTEND="noninteractive" \
     CUSTOM_PORT="8080" \
     CUSTOM_HTTPS_PORT="8181" \
-    TITLE=BOINC
+    TITLE=BOINC \
+    NO_GAMEPAD=true \
+    PIXELFLUX_WAYLAND=true
 
 RUN \
   echo "**** add icon ****" && \
@@ -24,9 +26,7 @@ RUN \
     /usr/share/selkies/www/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/boinc-icon.png && \
   echo "**** install packages ****" && \
-  curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xB991272AA858DEF3B0FF0C839FB27DC84490895D" | gpg --dearmor | tee /usr/share/keyrings/boinc.gpg >/dev/null && \
-  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/boinc.gpg] http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" > /etc/apt/sources.list.d/boinc.list && \
-  echo "deb-src [arch=amd64 signed-by=/usr/share/keyrings/boinc.gpg] http://ppa.launchpad.net/costamagnagianfranco/boinc/ubuntu noble main" >> /etc/apt/sources.list.d/boinc.list && \
+  add-apt-repository ppa:costamagnagianfranco/boinc && \
   if [ -z ${BOINC_VERSION+x} ]; then \
     BOINC="boinc-client"; \
   else \
@@ -47,6 +47,8 @@ RUN \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
+    /config/.cache \
+    /config/.launchpadlib \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
