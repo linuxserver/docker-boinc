@@ -34,7 +34,7 @@ opt_param_devices:
 custom_params:
   - {name: "shm-size", name_compose: "shm_size", value: "1gb", desc: "Recommended for all desktop images."}
 readme_hwaccel: true
-# Kasm blurb settings
+# Selkies blurb settings
 selkies_blurb: true
 show_nvidia: true
 external_http_port: "8080"
@@ -44,7 +44,6 @@ app_setup_block_enabled: true
 app_setup_block: |
   The container can be accessed at:
 
-  * http://yourhost:8080/
   * https://yourhost:8181/
 # init diagram
 init_diagram: |
@@ -122,6 +121,7 @@ init_diagram: |
   "boinc:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "19.04.26:", desc: "Rebase to resolute, make Wayland default disable with PIXELFLUX_WAYLAND=false."}
   - {date: "28.12.25:", desc: "Add Wayland init logic."}
   - {date: "07.07.25:", desc: "Rebase to selkies. Breaking change: HTTPS is now required. Use port 8181 with HTTPS for direct access. Reverse proxies can connect to 8080 over http as long as it's served over HTTPS to the user."}
   - {date: "19.08.24:", desc: "Rebase to noble."}

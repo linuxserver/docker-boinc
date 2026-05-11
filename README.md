@@ -58,7 +58,6 @@ The architectures supported by this image are:
 
 The container can be accessed at:
 
-* http://yourhost:8080/
 * https://yourhost:8181/
 
 ### Strict reverse proxies
@@ -672,6 +671,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.04.26:** - Rebase to resolute, make Wayland default disable with PIXELFLUX_WAYLAND=false.
 * **28.12.25:** - Add Wayland init logic.
 * **07.07.25:** - Rebase to selkies. Breaking change: HTTPS is now required. Use port 8181 with HTTPS for direct access. Reverse proxies can connect to 8080 over http as long as it's served over HTTPS to the user.
 * **19.08.24:** - Rebase to noble.
